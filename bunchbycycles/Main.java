@@ -5,11 +5,19 @@ public class Main {
     public int lowCount = 0;
     public int mediumCount = 0;
     public int highCount = 0;
-  };
+  }
 
-  static CountsByUsage countBatteriesByUsage(int[] cycles) {
+  static int CountsByUsage countBatteriesByUsage(int[] cycles) {
     CountsByUsage counts = new CountsByUsage();
-    return counts;
+    for(int i = 0; i < cycles.length; i++){
+      if(cycles[i] < 400){
+        return counts.lowCount++;
+      }if else (cycles[i] > 400 && cycles[i] < 990){
+        return counts.mediumCount++;
+      }if else(cycles[i]> 990){
+        count.highCount++;
+      }
+    }
   }
 
   static void testBucketingByNumberOfCycles() {
